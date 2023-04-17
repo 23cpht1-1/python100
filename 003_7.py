@@ -1,4 +1,4 @@
-# 3-7
+# 3-7 변수 이름 짓기
 
 # var a = 12
 # SyntaxError: invalid syntax
