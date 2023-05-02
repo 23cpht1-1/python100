@@ -20,21 +20,22 @@ chosen_num = []
 chosen_sym = []
 chosen_let = []
 
-for n in range(0,ct_numbers):
-    chosen_num.append(numbers[random.randrange(len(numbers))])
+for num in range(0,ct_numbers):
+    # chosen_num.append(numbers[random.randrange(len(numbers))])    # 리스트의 인덱스를 랜덤으로 뽑으려고 했는데
+    chosen_num.append(random.choice(numbers))                       # 걍 요소를 뽑으면 되는 거였고요?
+for sym in range(0,ct_symbols):
+    # chosen_sym.append(symbols[random.randrange(len(symbols))])
+    chosen_sym.append(random.choice(symbols))
+for let in range(0,ct_letters - ct_numbers - ct_symbols):
+    # chosen_let.append(letters[random.randrange(len(letters))])
+    chosen_let.append(random.choice(letters))
 
-for n in range(0,ct_symbols):
-    chosen_sym.append(symbols[random.randrange(len(symbols))])
-
-for n in range(0,ct_letters - ct_numbers - ct_symbols):
-    chosen_let.append(letters[random.randrange(len(letters))])
-
-chosen_list = [chosen_let, chosen_num, chosen_sym]
+chosen_list = [chosen_let, chosen_num, chosen_sym]      # 중첩리스트로 일단 묶음
 pw_list = []
 
-for sublist in chosen_list:
+for sublist in chosen_list:         # 중첩리스트를 단일의 리스트로 만들고 싶었음
     pw_list.extend(sublist)
-random.shuffle(pw_list)
+random.shuffle(pw_list)         # 섞어섞어
 
 pw =''.join(pw_list)    # 리스트의 요소들을 나열해서 ''로 구분된 문자열로 만들어줌 
 print('생성된 비밀번호: '+ pw)
@@ -45,5 +46,5 @@ print('생성된 비밀번호: '+ pw)
 # 기호는 몇개?
 #  2
 # 숫자는 몇개?
-#  4
-# 생성된 비밀번호: aL6ap95B%8)R
+#  3
+# 생성된 비밀번호: ig87h$wuWM1&
