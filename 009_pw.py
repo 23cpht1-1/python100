@@ -37,7 +37,7 @@ for sublist in chosen_list:
 random.shuffle(pw_list)
 
 pw =''.join(pw_list)    # 리스트의 요소들을 나열해서 ''로 구분된 문자열로 만들어줌 
-print(pw)
+print('생성된 비밀번호: '+ pw)
 
 # 안전한 비번 생성기
 # 몇글자 짜리?
@@ -46,4 +46,4 @@ print(pw)
 #  2
 # 숫자는 몇개?
 #  4
-# I2ZI)A&q616J
+# 생성된 비밀번호: aL6ap95B%8)R
