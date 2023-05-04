@@ -7,6 +7,9 @@ for n in range(0, len(student_scores)):
     student_scores[n] = int(student_scores[n])
 print(student_scores)
 
+# print(max(student_scores))
+# max()나 min() 함수로 간단히 표현 가능하지만 for문으로 시도해보자
+
 highest_score = 0
 for score in student_scores:
     if score > highest_score:
